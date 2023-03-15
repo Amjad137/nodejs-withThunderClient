@@ -48,18 +48,22 @@ http
 
             let deleteThis=body.Amjad;
 
-            // for(let i=0; i < myArray.length; i++){
-            //   if (myArray[i] === deleteThis){
-            //     myArray.splice(i , 1);
-            //     break;
-            //   }
-            //   else{
-            //     console.log("Match Not Found");
-            //     break;
-            //   }
-            // }
+            for(let i=0; i < myArray.length; i++){
+              if (myArray[i] === deleteThis){
+                myArray.splice(i , 1);
+                break;
+              }
+              else{
+                console.log("Match Not Found");
+                break;
+              }
+            }
 
-            myArray.find((elem,index) => {
+           
+            /**
+             Or We can use find() to delete
+
+              myArray.find((elem,index) => {
               if (elem === deleteThis){ //elem is pointing array elements automatically hence find is an array method(index also)
                 myArray.splice(index,1);
               }
@@ -67,10 +71,6 @@ http
                 // console.error("Match Not Found");  It sucks
               }
             });
-            /**
-             Or We can use find() to delete
-
-             
           
              */
 
@@ -88,5 +88,6 @@ http
   })
 
   // http://localhost:1836
+  //npm run nodemon
 
 
